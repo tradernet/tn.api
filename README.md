@@ -3,8 +3,8 @@
 # Socket.IO API
 
 * [Введение](#intro)
-* [Рыночные данные](#marketData)
-* [Клиентские данные](#clientData)
+* [Рыночные данные](#marketData) - [notifyQuotes](#notifyQuotes), [notifyOrderBook](#notifyOrderBook), [notifyMarkets](#notifyMarkets)
+* [Клиентские данные](#clientData) - [notifySessions](#notifySessions), [notifyPortfolio](#notifyPortfolio), [notifyOrders](#notifyOrders)
 * [Торговые приказы](#orders)
 * [Сессии безопасности](#sessions)
 * [Токены безопасности](#tokens)
@@ -51,6 +51,7 @@ ws.on('connect', function () {
 <a name="marketData"></a>
 ## Рыночные данные
 
+<a name="notifyQuotes"></a>
 ### Подписка на котировки
 
 Осуществляется отправкой на сервер сообщения **notifyQuotes** со списком тикеров. Котировки приходят в сообщениях с именем **q**. 
@@ -206,6 +207,7 @@ ws.emit('notifyQuotes', ['SBER', 'LKOH', 'GMKN', 'ROSN', 'GAZPM']);
 | x_max | Максимум за (период) |
 | x_istrade | Были ли по бумаге сделки |
  
+<a name="notifyOrderBook"></a>
 ### Подписка на стакан
 
 Осуществляется отправкой на сервер сообщения **notifyOrderBook** со списком тикеров.
@@ -284,6 +286,7 @@ ws.emit('notifyOrderBook', ['SBER']);
  2. Вставить позиции, указанные в массиве *ins*
  3. Обновить позиции, указанные в массиве *upd*
 
+<a name="notifyMarkets"></a>
 ### Подписка на сообщения о рынках
 
 Осуществляется отправкой сообщения **notifyMarkets**.
@@ -368,6 +371,7 @@ ws.emit('notifyMarkets');
 <a name="clientData"></a>
 ## Клиентские данные
 
+<a name="notifySessions"></a>
 ### Подписка на сессии безопасности клиента
 
 Осуществляется отправкой сообщения **notifySessions**.
@@ -388,7 +392,7 @@ ws.emit('notifySessions');
 
 *Пример сообщения:*
 
-
+<a name="notifyPortfolio"></a>
 ### Подписка на портфель клиента
 
 Осуществляется отправкой сообщения **notifyPortfolio**.
