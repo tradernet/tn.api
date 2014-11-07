@@ -1,6 +1,4 @@
-![](https://gitlab.nettrader.ru/m.boitsov/tndoc.sio/raw/master/rsz_logo_tradernet.png)
-
-![alt text](https://raw.githubusercontent.com/tradernet/tn.api/master/rsz_logo_tradernet.png "Logo Title Text 1")
+![TraderNet](https://raw.githubusercontent.com/tradernet/tn.api/master/rsz_logo_tradernet.png "TraderNet")
 
 # Socket.IO API
 
