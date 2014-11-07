@@ -2,7 +2,7 @@
 
 # Socket.IO API
 
-[Подписка на приказы клиента](#Подписка на приказы клиента)
+[Подписка на приказы клиента](#notifyOrders)
 
 ## Введение
 
@@ -487,7 +487,7 @@ ws.emit('notifyPortfolio');
 | trade |  |
 | trade[].trade_count |  |
 
-### Подписка на приказы клиента
+### <a name="notifyOrders"></a>Подписка на приказы клиента
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
