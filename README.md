@@ -2,8 +2,14 @@
 
 # Socket.IO API
 
-* [Подписка на приказы клиента](#notifyOrders)
+* [Введение](#intro)
+* [Рыночные данные](#marketData)
+* [Клиентские данные](#clientData)
+* [Торговые приказы](#orders)
+* [Сессии безопасности](#sessions)
+* [Токены безопасности](#tokens)
 
+<a name="intro"></a>
 ## Введение
 
 ### Подключение к Socket.IO:
@@ -42,6 +48,7 @@ ws.on('connect', function () {
 ```
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/bfsjpgvs/)
 
+<a name="marketData"></a>
 ## Рыночные данные
 
 ### Подписка на котировки
@@ -358,7 +365,7 @@ ws.emit('notifyMarkets');
 | c | Время закрытия рынка |
 | dt | Сдвиг в минутах относительно Москвы |
 
-
+<a name="clientData"></a>
 ## Клиентские данные
 
 ### Подписка на сессии безопасности клиента
@@ -538,9 +545,9 @@ ws.emit('notifyOrders');
 ]
 ```
 
-
 ### Сделки клиента
 
+<a name="orders"></a>
 ## Торговые приказы
 
 ### Выставление обычного приказа 
@@ -613,6 +620,7 @@ function deleteOrder(orderId) {
 
 ### Отмена StopLoss-приказа
 
+<a name="sessions"></a>
 ## Сессии безопасности
 
 ### Получение списка доступных сессий безопасности 
@@ -688,6 +696,7 @@ ws.emit('openSecuritySession', data, function (err, res) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
 
+<a name="tokens"></a>
 ## Токены безопасности
 
 ### Активация токена
