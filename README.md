@@ -621,7 +621,7 @@ function deleteOrder(orderId) {
 ```
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pqmpx9nt/)
 
-<a name="stopLoss"></a>
+<a name="putStopLoss"></a>
 ### Выставление StopLoss-приказа
 
 <a name="deleteStopLoss"></a>
