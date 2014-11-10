@@ -5,7 +5,7 @@
 * [Введение](#intro)
 * [Рыночные данные](#marketData) - [notifyQuotes](#notifyQuotes), [notifyOrderBook](#notifyOrderBook), [notifyMarkets](#notifyMarkets)
 * [Клиентские данные](#clientData) - [notifySessions](#notifySessions), [notifyPortfolio](#notifyPortfolio), [notifyOrders](#notifyOrders)
-* [Торговые приказы](#orders)
+* [Торговые приказы](#orders) - [Выставление обычного приказа](#putOrder), [Отмена приказа](#deleteOrder), [Выставление StopLoss-приказа](#putStopLoss), [Отмена StopLoss-приказа](#deleteStopLoss)
 * [Сессии безопасности](#sessions)
 * [Токены безопасности](#tokens)
 
@@ -554,7 +554,8 @@ ws.emit('notifyOrders');
 <a name="orders"></a>
 ## Торговые приказы
 
-### Выставление обычного приказа 
+<a name="putOrder"></a>
+### Выставление обычного приказа
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -582,6 +583,7 @@ ws.emit('putOrder', putData, function (err, res) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/fosxg6vx/)
 
+<a name="deleteOrder"></a>
 ### Отмена приказа
 
 ```javascript
@@ -619,9 +621,10 @@ function deleteOrder(orderId) {
 ```
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pqmpx9nt/)
 
-
+<a name="stopLoss"></a>
 ### Выставление StopLoss-приказа
 
+<a name="deleteStopLoss"></a>
 ### Отмена StopLoss-приказа
 
 <a name="sessions"></a>
