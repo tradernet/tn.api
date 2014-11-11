@@ -388,6 +388,51 @@ $params = array (
 
 Список достижений
 
+*Формат ответа*
+
+|параметр	описание	обязательный|
+| -------- | -------- | ------------ | 
+|portfolioId|		|да|
+|profit	|	|да|
+|income	|	|да|
+|profileUrl	|Ссылка на портфель	|да|
+|login	|Логин владельца портфеля	|да|
+|score	|	|да|
+
+*Пример ответа сервера*
+
+```json
+{
+    profit_list: {
+        2337: {
+            portfolioId: 2337,
+            profit: "1.016255", 
+            income: "1727.520000", 
+            profileUrl: "https://sb-ek.testdev/portfolios/view/id/2337", 
+            login: "KGQ",
+            score: 0,
+        },
+        2713: {
+            portfolioId: 2713,
+            profit: "1.005844", 
+            income: "540.460000", 
+            profileUrl: "https://sb-ek.testdev/portfolios/view/id/2713", 
+            login: "9LH", 
+            score: 0,
+        },
+        4125: {
+            portfolioId: 4125,
+            profit: "1.002844", 
+            income: "1592.340000", 
+            profileUrl: "https://sb-ek.testdev/portfolios/view/id/4125", 
+            login: "CMR", 
+            score: 0,
+        }
+    },
+    code: 0
+}
+```
+
 ### getInvestFeedByTicker
 
 Лента инвестидей по тикеру всех авторов на кторых подписан пользователь
