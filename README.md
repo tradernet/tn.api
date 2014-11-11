@@ -3,14 +3,21 @@
 # Socket.IO API
 
 * [Введение](#intro)
-* [Рыночные данные](#marketData) - [notifyQuotes](#notifyQuotes), [notifyOrderBook](#notifyOrderBook), [notifyMarkets](#notifyMarkets)
-* [Клиентские данные](#clientData) - [notifySessions](#notifySessions), [notifyPortfolio](#notifyPortfolio), [notifyOrders](#notifyOrders)
-* [Торговые приказы](#orders) - [Выставление обычного приказа](#putOrder), [Отмена приказа](#deleteOrder), [Выставление StopLoss-приказа](#putStopLoss), [Отмена StopLoss-приказа](#deleteStopLoss)
-* [Сессии безопасности](#sessions) - [Получение списка доступных сессий безопасности](#getSafetyTypes), 
-                                     [Получение списка открытых сессий безопасности](#getSecuritySessions),
-                                     [Инициализация двухэтапного открытия сессии безопасности](#initValidation),
-                                     [Открытие сессии безопасности](#activateToken)
-* [Токены безопасности](#tokens) - [Активация токена](#activateToken), [Синхронизация токена](#syncToken), [Информация о токене](#tokenInfo)
+* [Рыночные данные](#marketData): подписки на [котировки](#notifyQuotes), 
+                                  [стакан](#notifyOrderBook), 
+                                  [сообщения о рынках](#notifyMarkets)
+* [Клиентские данные](#clientData): подписки на клиентские [сессии безопасности](#notifySessions), 
+                                    [портфель](#notifyPortfolio), 
+                                    [приказы](#notifyOrders)
+* [Торговые приказы](#orders): выставление [обычного](#putOrder), 
+                               [StopLoss](#putStopLoss) приказа,
+                               [отмена приказа](#deleteOrder)
+* [Сессии безопасности](#sessions): [получение списка доступных сессий безопасности](#getSafetyTypes), 
+                                    [получение списка открытых сессий безопасности](#getSecuritySessions),
+                                    [инициализация двухэтапного открытия сессии безопасности](#initValidation),
+                                    [открытие сессии безопасности](#activateToken)
+* [Токены безопасности](#tokens): [Активация токена](#activateToken), 
+                                  [Синхронизация токена](#syncToken), [Информация о токене](#tokenInfo)
 
 <a name="intro"></a>
 ## Введение
