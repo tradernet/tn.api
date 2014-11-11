@@ -38,10 +38,11 @@
         * [getSafetyTypes](#getSafetyTypes) - получение списка доступных типов безопасности
         * [getSecuritySessions](#getSecuritySessions) - получение открытых сессий безопасности
         * [initValidation](#initValidation) - инициализация двухэтапного открытия сессии безопасности
-        * [activateToken](#activateToken) - открытие сессии безопасности
-    * [Токены безопасности](#tokens): [активация токена](#activateToken), 
-                                      [синхронизация токена](#syncToken), 
-                                      [информация о токене](#tokenInfo)
+        * [openSecuritySession](#openSecuritySession) - открытие сессии безопасности
+    * [Токены безопасности](#tokens): 
+        * [activateToken](#activateToken) - активация токена
+        * [syncToken](#syncToken) - синхронизация токена
+        * [tokenInfo](#tokenInfo) - информация о токене
 
 <a name="RESTAPI"></a>
 # REST API
@@ -1640,7 +1641,7 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 В случае успешной отправки аргумент *res* получает значение *0*.
 
 
-<a name="activateToken"></a>
+<a name="openSecuritySession"></a>
 ### Открытие сессии безопасности
 
 
