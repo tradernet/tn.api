@@ -966,7 +966,9 @@ ws.on('connect', function () {
 ## Рыночные данные
 
 <a name="notifyQuotes"></a>
-### Подписка на котировки
+### notifyQuotes
+
+Подписка на котировки
 
 Осуществляется отправкой на сервер сообщения **notifyQuotes** со списком тикеров. Котировки приходят в сообщениях с именем **q**. 
 В первый раз котировка приходит полностью. Потом приходят изменения.
@@ -1122,7 +1124,9 @@ ws.emit('notifyQuotes', ['SBER', 'LKOH', 'GMKN', 'ROSN', 'GAZPM']);
 | x_istrade | Были ли по бумаге сделки |
  
 <a name="notifyOrderBook"></a>
-### Подписка на стакан
+### notifyOrderBook
+
+Подписка на стакан
 
 Осуществляется отправкой на сервер сообщения **notifyOrderBook** со списком тикеров.
 Стакан приходит в сообщениях с именем **b**.
@@ -1201,7 +1205,9 @@ ws.emit('notifyOrderBook', ['SBER']);
  3. Обновить позиции, указанные в массиве *upd*
 
 <a name="notifyMarkets"></a>
-### Подписка на сообщения о рынках
+### notifyMarkets
+
+Подписка на сообщения о рынках
 
 Осуществляется отправкой сообщения **notifyMarkets**.
 
@@ -1286,7 +1292,9 @@ ws.emit('notifyMarkets');
 ## Клиентские данные
 
 <a name="notifySessions"></a>
-### Подписка на сессии безопасности клиента
+### notifySessions
+
+Подписка на сессии безопасности клиента
 
 Осуществляется отправкой сообщения **notifySessions**.
 
@@ -1307,7 +1315,9 @@ ws.emit('notifySessions');
 *Пример сообщения:*
 
 <a name="notifyPortfolio"></a>
-### Подписка на портфель клиента
+### notifyPortfolio
+
+Подписка на портфель клиента
 
 Осуществляется отправкой сообщения **notifyPortfolio**.
 
@@ -1413,7 +1423,9 @@ ws.emit('notifyPortfolio');
 | trade[].trade_count |  |
 
 <a name="notifyOrders"></a>
-### Подписка на приказы клиента
+### notifyOrders
+
+Подписка на приказы клиента
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1463,13 +1475,13 @@ ws.emit('notifyOrders');
 ]
 ```
 
-### Сделки клиента
-
 <a name="orders"></a>
 ## Торговые приказы
 
 <a name="putOrder"></a>
-### Выставление обычного приказа
+### putOrder
+
+Выставление приказа
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1498,7 +1510,9 @@ ws.emit('putOrder', putData, function (err, res) {
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/fosxg6vx/)
 
 <a name="deleteOrder"></a>
-### Отмена приказа
+### deleteOrder
+
+Отмена приказа
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1674,7 +1688,9 @@ ws.emit('openSecuritySession', data, function (err, res) {
 ## Токены безопасности
 
 <a name="activateToken"></a>
-### Активация токена
+### activateToken
+
+Активация токена
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1687,7 +1703,9 @@ ws.emit('activateToken', tokenSN, function (err, res) {
 ```
 
 <a name="syncToken"></a>
-### Синхронизация токена
+### synchronizeToken
+
+Синхронизация токена
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1701,7 +1719,9 @@ ws.emit('synchronizeToken', key1, key2, function (err, res) {
 ```
 
 <a name="tokenInfo"></a>
-### Информация о токене
+### getTokenInfo
+
+Информация о токене
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
