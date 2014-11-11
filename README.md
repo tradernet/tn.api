@@ -678,6 +678,88 @@ $params = array (
 
 Данные пользователя по ID
 
+*Параметры команды*
+
+параметр | описание | обязательный |
+| -------- | -------- | ------------ | 
+| user_id | ID Пользователя | да |
+
+*Формат ответа*
+
+| параметр | описание | обязательный |
+| -------- | -------- | ------------ | 
+| user_data | объект юзер | нет |
+| code | Код статуса исполнения | да |
+
+*user_data*
+
+параметр | описание | обязательный |
+| -------- | -------- | ------------ | 
+| id | ID юзера | да |
+| group_id |  | да |
+| login |  | да |
+| pwd |  | да |
+| lastname |  | нет |
+| firstname |  | нет |
+| middlename |  | нет |
+| email |  | нет |
+| mod_tmstmp |  | да |
+| rec_tmstmp |  | да |
+| last_visit_tmstmp |  | да |
+| f_active |  | да |
+| md5 |  | да |
+| trader_systems_id |  | нет |
+| client_id |  | да |
+| f_demo |  | да |
+| birthday |  | нет |
+| sex |  | нет |
+| citizenship |  | да |
+| status |  | да |
+| type |  | да |
+| umod_tmstmp |  | да |
+| status_id |  | да |
+| date_tsmod |  | да |
+| utm_campaign |  | да |
+| role_name |  | да |
+| role |  | да |
+
+*Пример ответа сервера*
+
+```json
+{
+    user_data: {
+        id: 10,
+        group_id: 2,
+        login: "gti",
+        pwd: "wrew43ew4w3e3435wser",
+        lastname: "Вованов",
+        firstname: "Вован",
+        middlename: "Вованович",
+        email: null,
+        mod_tmstmp: "2012-10-24 07:39:31",
+        rec_tmstmp: "2010-04-01 13:02:22",
+        last_visit_tmstmp: null,
+        f_active: 1,
+        md5: null,
+        trader_systems_id: null,
+        client_id: 343434,
+        f_demo: 0,
+        birthday: null,
+        sex: null,
+        citizenship: null,
+        status: null,
+        type: null,
+        umod_tmstmp: null,
+        status_id: null,
+        date_tsmod: null,
+        utm_campaign: null,
+        role_name: "user",
+        role: 2,
+    }
+    code: 0
+}
+```
+
 ### reg
 
 Анкета: Шаг 1. Регистрация пользователя
