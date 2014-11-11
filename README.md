@@ -1647,7 +1647,14 @@ ws.emit('getSecuritySessions', function (err, sessions) {
 <a name="initValidation"></a>
 ### initValidation
 
-Инициализация двухэтапного открытия сессии безопасности (отправка SMS)
+Инициализация двухэтапного открытия сессии безопасности.
+Отправляет код подтверждения указанным способом (SMS). 
+
+*Параметры*
+
+| Название | Описание |
+| -------- | -------- |
+| safetyTypeId | идентификатор типа сессиия безопасности |
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1663,8 +1670,6 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
 
 *Результат:*
-
-Отправляет код подтверждения указанным способом (SMS). 
 
 Результат выполнения передаётся в аргументы *err* и *res* колбэка.
 
