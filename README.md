@@ -1535,12 +1535,6 @@ function deleteOrder(orderId) {
 ```
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pqmpx9nt/)
 
-<a name="putStopLoss"></a>
-### Выставление StopLoss-приказа
-
-<a name="deleteStopLoss"></a>
-### Отмена StopLoss-приказа
-
 <a name="sessions"></a>
 ## Сессии безопасности
 
