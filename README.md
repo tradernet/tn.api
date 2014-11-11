@@ -15,13 +15,13 @@
         * [getBlogsPostById](#getBlogsPostById) - пост по ID
         * [getBestTraders](#getBestTraders) - рейтинг трэйдеров
         * [getUserInfoById](#getUserInfoById) - данные пользователя по ID
-        * Анкета
-            * [reg](#reg) - Шаг 1. Регистрация пользователя. Создание учётной записи. Получение его userId
-            * [regPhone](#regPhone) - Шаг 2. Отправка sms кода для подтверждения номера телефона
-            * [regPhoneSms](#regPhoneSms) - Шаг 3. Подтверждение номера телефона при помощи кода
-            * [regTariff](#regTariff) - Шаг 4. Выбор тарифа пользователя
-            * [regPassport](#regPassport) - Шаг 5. Паспортные данные нового пользователя
-            * [regDocs](#regDocs) - Шаг 6. Регистрационные документы нового пользователя
+        * Анкета (6 шагов)
+            1. [reg](#reg) - регистрация пользователя. Создание учётной записи. Получение его userId
+            2. [regPhone](#regPhone) - отправка sms кода для подтверждения номера телефона
+            3. [regPhoneSms](#regPhoneSms) - подтверждение номера телефона при помощи кода
+            4. [regTariff](#regTariff) - выбор тарифа пользователя
+            5. [regPassport](#regPassport) - паспортные данные нового пользователя
+            6. [regDocs](#regDocs) - регистрационные документы нового пользователя
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
     * [Рыночные данные](#marketData): 
