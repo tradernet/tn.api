@@ -771,8 +771,38 @@ ws.emit('openSecuritySession', data, function (err, res) {
 <a name="activateToken"></a>
 ### Активация токена
 
+```javascript
+var ws = io('https://wsbeta.tradernet.ru');
+
+var tokenSN = 'TOKEN_SN';
+
+ws.emit('activateToken', tokenSN, function (err, res) {
+    console.log(err, res);
+});
+```
+
 <a name="syncToken"></a>
 ### Синхронизация токена
 
+```javascript
+var ws = io('https://wsbeta.tradernet.ru');
+
+var key1 = 'KEY1';
+var key2 = 'KEY2';
+
+ws.emit('synchronizeToken', key1, key2, function (err, res) {
+    console.log(err, res);
+});
+```
+
 <a name="tokenInfo"></a>
 ### Информация о токене
+
+```javascript
+var ws = io('https://wsbeta.tradernet.ru');
+
+ws.emit('getTokenInfo', function (err, res) {
+    console.log(err, res);
+});
+```
+
