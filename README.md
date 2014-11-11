@@ -23,9 +23,10 @@
         * [regDocs](#regDocs)
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
-    * [Рыночные данные](#marketData): подписки на [котировки](#notifyQuotes), 
-                                      [стакан](#notifyOrderBook), 
-                                      [сообщения о рынках](#notifyMarkets)
+    * [Рыночные данные](#marketData): 
+        * [notifyQuotes](#notifyQuotes) - подписка на котировки
+        * подписка на [стакан](#notifyOrderBook) 
+        * подписка на [сообщения о рынках](#notifyMarkets)
     * [Клиентские данные](#clientData): подписки на клиентские [сессии безопасности](#notifySessions), 
                                         [портфель](#notifyPortfolio), 
                                         [приказы](#notifyOrders)
