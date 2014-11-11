@@ -6,8 +6,11 @@
 * [Рыночные данные](#marketData) - [notifyQuotes](#notifyQuotes), [notifyOrderBook](#notifyOrderBook), [notifyMarkets](#notifyMarkets)
 * [Клиентские данные](#clientData) - [notifySessions](#notifySessions), [notifyPortfolio](#notifyPortfolio), [notifyOrders](#notifyOrders)
 * [Торговые приказы](#orders) - [Выставление обычного приказа](#putOrder), [Отмена приказа](#deleteOrder), [Выставление StopLoss-приказа](#putStopLoss), [Отмена StopLoss-приказа](#deleteStopLoss)
-* [Сессии безопасности](#sessions)
-* [Токены безопасности](#tokens)
+* [Сессии безопасности](#sessions) - [Получение списка доступных сессий безопасности](#getSafetyTypes), 
+                                     [Получение списка открытых сессий безопасности](#getSecuritySessions),
+                                     [Инициализация двухэтапного открытия сессии безопасности](#initValidation),
+                                     [Открытие сессии безопасности](#activateToken)
+* [Токены безопасности](#tokens) - [Активация токена](#activateToken), [Синхронизация токена](#syncToken), [Информация о токене](#tokenInfo)
 
 <a name="intro"></a>
 ## Введение
@@ -630,6 +633,7 @@ function deleteOrder(orderId) {
 <a name="sessions"></a>
 ## Сессии безопасности
 
+<a name="getSafetyTypes"></a>
 ### Получение списка доступных сессий безопасности 
 
 ```javascript
@@ -643,6 +647,7 @@ ws.emit('getSafetyTypes', function (err, safetyTypes) {
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/j5gvbckq/)
 
 
+<a name="getSecuritySessions"></a>
 ### Получение списка открытых сессий безопасности
 
 ```javascript
@@ -670,6 +675,7 @@ ws.emit('getSecuritySessions', function (err, sessions) {
 ]
 ```
 
+<a name="initValidation"></a>
 ### Инициализация двухэтапного открытия сессии безопасности (отправка SMS)
 
 ```javascript
@@ -685,6 +691,7 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
 
+<a name="activateToken"></a>
 ### Открытие сессии безопасности
 
 
@@ -706,8 +713,11 @@ ws.emit('openSecuritySession', data, function (err, res) {
 <a name="tokens"></a>
 ## Токены безопасности
 
+<a name="activateToken"></a>
 ### Активация токена
 
+<a name="syncToken"></a>
 ### Синхронизация токена
 
+<a name="tokenInfo"></a>
 ### Информация о токене
