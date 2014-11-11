@@ -207,45 +207,45 @@ $params = array (
 
 ```json
 {
-    code: 0,
-    blogs_feed: {
-        userId: 10,
-        tsStart: "2012-06-02 23:52:50",
-        page: "1",
-        posts: [
-            {
-                id: 240,
-                date_crt: "2012-06-02 23:52:21.830204",
-                title: "title",
-                subtitle: "subtitle",
-                text: "TEXT",
-                agg_comments: 0,
-                agg_likes: null,
-                login: "gti",
-                ilike: null,
-                mainImg: "/data/avatar/10.s.png",
-                type: "1 - блог || 2 - инвестидея",
-                param_1:"Рекомендация (если type = 2 )",
-                param_2:"Доход (если type = 2 )",
-                tags: {
-                    1: "Тэг №1",
-                    2: "тэг №2" 
-                }
-            },
-            {
-                id: 239,
-                date_crt: "2012-06-02 23:51:32.776083",
-                title: "",
-                subtitle: "",
-                text: "TEXTTEXT",
-                agg_comments: 3,
-                agg_likes: 2,
-                login: "gti",
-                ilike: true,
-                mainImg: "/data/avatar/10.s.png" 
-            }
-        ]
-    }
+  "code": 0,
+  "blogs_feed": {
+    "userId": 10,
+    "tsStart": "2012-06-02 23:52:50",
+    "page": "1",
+    "posts": [
+      {
+        "id": 240,
+        "date_crt": "2012-06-02 23:52:21.830204",
+        "title": "title",
+        "subtitle": "subtitle",
+        "text": "TEXT",
+        "agg_comments": 0,
+        "agg_likes": null,
+        "login": "gti",
+        "ilike": null,
+        "mainImg": "/data/avatar/10.s.png",
+        "type": "1 - блог || 2 - инвестидея",
+        "param_1": "Рекомендация (если type = 2 )",
+        "param_2": "Доход (если type = 2 )",
+        "tags": {
+          "1": "Тэг №1",
+          "2": "тэг №2"
+        }
+      },
+      {
+        "id": 239,
+        "date_crt": "2012-06-02 23:51:32.776083",
+        "title": "",
+        "subtitle": "",
+        "text": "TEXTTEXT",
+        "agg_comments": 3,
+        "agg_likes": 2,
+        "login": "gti",
+        "ilike": true,
+        "mainImg": "/data/avatar/10.s.png"
+      }
+    ]
+  }
 }
 ```
 
@@ -295,45 +295,45 @@ $params = array (
 
 ```json
 {
-    code: 0,
-    blogs_feed: {
-        userId: 10,
-        tsStart: "2012-06-02 23:52:50",
-        page: "1",
-        posts: [
-            {
-                id: 240,
-                date_crt: "2012-06-02 23:52:21.830204",
-                title: "title",
-                subtitle: "subtitle",
-                text: "TEXT",
-                agg_comments: 0,
-                agg_likes: null,
-                login: "gti",
-                ilike: null,
-                mainImg: "/data/avatar/10.s.png",
-                type: "1 - блог || 2 - инвестидея || 3 - обучение",
-                param_1:"Рекомендация (если type = 2 )",
-                param_2:"Доход (если type = 2 )",
-                tags: {
-                    1: "Тэг №1",
-                    2: "тэг №2" 
-                }
-            },
-            {
-                id: 239,
-                date_crt: "2012-06-02 23:51:32.776083",
-                title: "",
-                subtitle: "",
-                text: "TEXTTEXT",
-                agg_comments: 3,
-                agg_likes: 2,
-                login: "gti",
-                ilike: true,
-                mainImg: "/data/avatar/10.s.png" 
-            }
-        ]
-    }
+  "code": 0,
+  "blogs_feed": {
+    "userId": 10,
+    "tsStart": "2012-06-02 23:52:50",
+    "page": "1",
+    "posts": [
+      {
+        "id": 240,
+        "date_crt": "2012-06-02 23:52:21.830204",
+        "title": "title",
+        "subtitle": "subtitle",
+        "text": "TEXT",
+        "agg_comments": 0,
+        "agg_likes": null,
+        "login": "gti",
+        "ilike": null,
+        "mainImg": "/data/avatar/10.s.png",
+        "type": "1 - блог || 2 - инвестидея || 3 - обучение",
+        "param_1": "Рекомендация (если type = 2 )",
+        "param_2": "Доход (если type = 2 )",
+        "tags": {
+          "1": "Тэг №1",
+          "2": "тэг №2"
+        }
+      },
+      {
+        "id": 239,
+        "date_crt": "2012-06-02 23:51:32.776083",
+        "title": "",
+        "subtitle": "",
+        "text": "TEXTTEXT",
+        "agg_comments": 3,
+        "agg_likes": 2,
+        "login": "gti",
+        "ilike": true,
+        "mainImg": "/data/avatar/10.s.png"
+      }
+    ]
+  }
 }
 ```
 
@@ -384,15 +384,15 @@ $params = array (
 Успешное завершение:
 
 ```json
-{code: 0}
+{ "code": 0}
 ```
 
 Ошибка в параметрах:
 
 ```json
 {
-    code: 5,
-    errMsg: Invalid params for Orderstat
+    "code": 5,
+    "errMsg": "Invalid params for Orderstat"
 }
 ```
 
@@ -400,8 +400,8 @@ $params = array (
 
 ```php
 {
-    code: 8,
-    errMsg: Unkonown IP
+    "code": 8,
+    "errMsg": "Unkonown IP"
 }
 ```
 
@@ -409,8 +409,8 @@ $params = array (
 
 ```php
 {
-    code: 9,
-    errMsg: Error Insertion
+    "code": 9,
+    "errMsg": "Error Insertion"
 }
 ```
 
@@ -434,33 +434,33 @@ $params = array (
 
 ```json
 {
-    profit_list: {
-        2337: {
-            portfolioId: 2337,
-            profit: "1.016255", 
-            income: "1727.520000", 
-            profileUrl: "https://sb-ek.testdev/portfolios/view/id/2337", 
-            login: "KGQ",
-            score: 0,
-        },
-        2713: {
-            portfolioId: 2713,
-            profit: "1.005844", 
-            income: "540.460000", 
-            profileUrl: "https://sb-ek.testdev/portfolios/view/id/2713", 
-            login: "9LH", 
-            score: 0,
-        },
-        4125: {
-            portfolioId: 4125,
-            profit: "1.002844", 
-            income: "1592.340000", 
-            profileUrl: "https://sb-ek.testdev/portfolios/view/id/4125", 
-            login: "CMR", 
-            score: 0,
-        }
+  "profit_list": {
+    "2337": {
+      "portfolioId": 2337,
+      "profit": "1.016255",
+      "income": "1727.520000",
+      "profileUrl": "https://sb-ek.testdev/portfolios/view/id/2337",
+      "login": "KGQ",
+      "score": 0
     },
-    code: 0
+    "2713": {
+      "portfolioId": 2713,
+      "profit": "1.005844",
+      "income": "540.460000",
+      "profileUrl": "https://sb-ek.testdev/portfolios/view/id/2713",
+      "login": "9LH",
+      "score": 0
+    },
+    "4125": {
+      "portfolioId": 4125,
+      "profit": "1.002844",
+      "income": "1592.340000",
+      "profileUrl": "https://sb-ek.testdev/portfolios/view/id/4125",
+      "login": "CMR",
+      "score": 0
+    }
+  },
+  "code": 0
 }
 ```
 
@@ -510,45 +510,45 @@ $params = array (
 
 ```json
 {
-    code: 0,
-    blogs_feed: {
-        userId: 10,
-        tsStart: "2012-06-02 23:52:50",
-        page: "1",
-        posts: [
-            {
-                id: 240,
-                date_crt: "2012-06-02 23:52:21.830204",
-                title: "title",
-                subtitle: "subtitle",
-                text: "TEXT",
-                agg_comments: 0,
-                agg_likes: null,
-                login: "gti",
-                ilike: null,
-                mainImg: "/data/avatar/10.s.png",
-                type: "1 - блог || 2 - инвестидея || 3 - обучение",
-                param_1:"Рекомендация (если type = 2 )",
-                param_2:"Доход (если type = 2 )",
-                tags: {
-                    1: "Тэг №1",
-                    2: "тэг №2" 
-                }
-            },
-            {
-                id: 239,
-                date_crt: "2012-06-02 23:51:32.776083",
-                title: "",
-                subtitle: "",
-                text: "TEXTTEXT",
-                agg_comments: 3,
-                agg_likes: 2,
-                login: "gti",
-                ilike: true,
-                mainImg: "/data/avatar/10.s.png" 
-            }
-        ]
-    }
+  "code": 0,
+  "blogs_feed": {
+    "userId": 10,
+    "tsStart": "2012-06-02 23:52:50",
+    "page": "1",
+    "posts": [
+      {
+        "id": 240,
+        "date_crt": "2012-06-02 23:52:21.830204",
+        "title": "title",
+        "subtitle": "subtitle",
+        "text": "TEXT",
+        "agg_comments": 0,
+        "agg_likes": null,
+        "login": "gti",
+        "ilike": null,
+        "mainImg": "/data/avatar/10.s.png",
+        "type": "1 - блог || 2 - инвестидея || 3 - обучение",
+        "param_1": "Рекомендация (если type = 2 )",
+        "param_2": "Доход (если type = 2 )",
+        "tags": {
+          "1": "Тэг №1",
+          "2": "тэг №2"
+        }
+      },
+      {
+        "id": 239,
+        "date_crt": "2012-06-02 23:51:32.776083",
+        "title": "",
+        "subtitle": "",
+        "text": "TEXTTEXT",
+        "agg_comments": 3,
+        "agg_likes": 2,
+        "login": "gti",
+        "ilike": true,
+        "mainImg": "/data/avatar/10.s.png"
+      }
+    ]
+  }
 }
 ```
 
@@ -679,31 +679,31 @@ $params = array (
 
 ```json
 {
-    profits: {
-        21198: {
-            rating: 5,
-            profit: 1254.0858,
-            income: null,
-            user_id: 56423,
-            countMonth: 1,
-            isDemo: 1,
-            name: "TDGJ",
-            login: "TDGJ",
-            score: 25
-        },
-        35807: {
-            rating: 2,
-            profit: 10233.3143,
-            income: "102280090.780000",
-            user_id: 101262,
-            countMonth: 1,
-            isDemo: 1,
-            name: "3G2K",
-            login: "Target2006",
-            score: 145
-        }
+  "profits": {
+    "21198": {
+      "rating": 5,
+      "profit": 1254.0858,
+      "income": null,
+      "user_id": 56423,
+      "countMonth": 1,
+      "isDemo": 1,
+      "name": "TDGJ",
+      "login": "TDGJ",
+      "score": 25
     },
-    code: 0
+    "35807": {
+      "rating": 2,
+      "profit": 10233.3143,
+      "income": "102280090.780000",
+      "user_id": 101262,
+      "countMonth": 1,
+      "isDemo": 1,
+      "name": "3G2K",
+      "login": "Target2006",
+      "score": 145
+    }
+  },
+  "code": 0
 }
 ```
 
@@ -761,36 +761,36 @@ $params = array (
 
 ```json
 {
-    user_data: {
-        id: 10,
-        group_id: 2,
-        login: "gti",
-        pwd: "wrew43ew4w3e3435wser",
-        lastname: "Вованов",
-        firstname: "Вован",
-        middlename: "Вованович",
-        email: null,
-        mod_tmstmp: "2012-10-24 07:39:31",
-        rec_tmstmp: "2010-04-01 13:02:22",
-        last_visit_tmstmp: null,
-        f_active: 1,
-        md5: null,
-        trader_systems_id: null,
-        client_id: 343434,
-        f_demo: 0,
-        birthday: null,
-        sex: null,
-        citizenship: null,
-        status: null,
-        type: null,
-        umod_tmstmp: null,
-        status_id: null,
-        date_tsmod: null,
-        utm_campaign: null,
-        role_name: "user",
-        role: 2,
-    }
-    code: 0
+  "user_data": {
+    "id": 10,
+    "group_id": 2,
+    "login": "gti",
+    "pwd": "wrew43ew4w3e3435wser",
+    "lastname": "Вованов",
+    "firstname": "Вован",
+    "middlename": "Вованович",
+    "email": null,
+    "mod_tmstmp": "2012-10-24 07:39:31",
+    "rec_tmstmp": "2010-04-01 13:02:22",
+    "last_visit_tmstmp": null,
+    "f_active": 1,
+    "md5": null,
+    "trader_systems_id": null,
+    "client_id": 343434,
+    "f_demo": 0,
+    "birthday": null,
+    "sex": null,
+    "citizenship": null,
+    "status": null,
+    "type": null,
+    "umod_tmstmp": null,
+    "status_id": null,
+    "date_tsmod": null,
+    "utm_campaign": null,
+    "role_name": "user",
+    "role": 2
+  },
+  "code": 0
 }
 ```
 
