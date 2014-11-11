@@ -1690,8 +1690,7 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 | Название | Описание |
 | -------- | -------- |
 | safetyTypeId | идентификатор типа сессиия безопасности |
-| validationKey | если тип безопасности требует подтверждения, содержит код подтверждения, иначе собержит null |
-
+| validationKey | код подтверждения. Если тип безопасности не требует подтверждения, должен быть null |
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
