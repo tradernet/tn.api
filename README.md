@@ -1,8 +1,11 @@
 ![TraderNet](https://raw.githubusercontent.com/tradernet/tn.api/master/rsz_logo_tradernet.png "TraderNet")
 
 * [REST API](#RESTAPI)
-
-    * Команды
+    * [Формат запроса](#restReqFormat)
+    * [Формирование подписи](#restReqSig)
+    * [Ответ сервера](#restResponse)
+    * [Возможные коды ответа](#restResponseCodes)
+    * [Команды](#restCommands)
         * [AddBlogPost](#AddBlogPost)
         * [GetBlogsFeed](#GetBlogsFeed)
         * [getBlogsFeedByClientId](#getBlogsFeedByClientId)
@@ -50,6 +53,7 @@ API_SECRET: при доступе по userId задаётся в профиле
 
 Тип HTTP запроса: POST (возможен GET для тестирования)
 
+<a name="restReqFormat"></a>
 ## Формат запроса 
 
 Запрос представляет из себя JSON со следующими параметрами:
@@ -61,6 +65,7 @@ API_SECRET: при доступе по userId задаётся в профиле
 |params | параметры команды (object) | да |
 |sig    | подпись (string)           | да |
 
+<a name="restReqSig"></a>
 ### Формирование подписи
 
 Параметр sig равен md5 от конкатенации пар "parameter_name=parameter_value", 
@@ -68,9 +73,8 @@ API_SECRET: при доступе по userId задаётся в профиле
 и добавленного в конец строки секрета API_SECRET. 
 Вложенные параметры обрабатываются рекурсивно.
 
-
-
-## Ответ сервера:
+<a name="restResponse"></a>
+## Ответ сервера
 
 | параметр | описание                      | обязательный |
 | -------- | --------                      | ------------ |
@@ -78,7 +82,8 @@ API_SECRET: при доступе по userId задаётся в профиле
 | data     | Данные ответа (mixed)         | нет |
 | errMsg   | Сообщение об ошибке (string), | необязательный параметр, может взвращаться в случае возникновения ошибки | нет |
 
-### Возможные коды ответа:
+<a name="restResponseCodes"></a>
+### Возможные коды ответа
 
 | Код | Имя | Описание |
 | --- | --- | -------- |
@@ -99,6 +104,7 @@ API_SECRET: при доступе по userId задаётся в профиле
 | 14 | ERROR_BAD_CODE | Неверный проверочный код |
 
 
+<a name="restCommands"></a>
 ## Команды 
 
 <a name="AddBlogPost"></a>
