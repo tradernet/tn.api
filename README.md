@@ -25,18 +25,20 @@
     * [Введение](#intro)
     * [Рыночные данные](#marketData): 
         * [notifyQuotes](#notifyQuotes) - подписка на котировки
-        * подписка на [стакан](#notifyOrderBook) 
-        * подписка на [сообщения о рынках](#notifyMarkets)
-    * [Клиентские данные](#clientData): подписки на клиентские [сессии безопасности](#notifySessions), 
-                                        [портфель](#notifyPortfolio), 
-                                        [приказы](#notifyOrders)
-    * [Торговые приказы](#orders): выставление [обычного](#putOrder), 
-                                   [StopLoss](#putStopLoss) приказа,
-                                   [отмена приказа](#deleteOrder)
-    * [Сессии безопасности](#sessions): получение списков [доступных типов безопасности](#getSafetyTypes) и 
-                                        [открытых сессий безопасности](#getSecuritySessions),
-                                        [инициализация двухэтапного открытия сессии безопасности](#initValidation),
-                                        [открытие сессии безопасности](#activateToken)
+        * [notifyOrderBook](#notifyOrderBook) - подписка на стакан 
+        * [notifyMarkets](#notifyMarkets) - подписка на сообщения о рынках
+    * [Клиентские данные](#clientData): 
+        * [notifySessions](#notifySessions) - подписки на клиентские сессии безопасности, 
+        * [портфель](#notifyPortfolio)
+        * [приказы](#notifyOrders)
+    * [Торговые приказы](#orders): 
+        * [putOrder](#putOrder) - выставление приказа
+        * [deleteOrder](#deleteOrder) - отмена приказа
+    * [Сессии безопасности](#sessions): 
+        * [getSafetyTypes](#getSafetyTypes) - получение списка доступных типов безопасности
+        * [getSecuritySessions](#getSecuritySessions) - получение открытых сессий безопасности
+        * [initValidation](#initValidation) - инициализация двухэтапного открытия сессии безопасности
+        * [activateToken](#activateToken) - открытие сессии безопасности
     * [Токены безопасности](#tokens): [активация токена](#activateToken), 
                                       [синхронизация токена](#syncToken), 
                                       [информация о токене](#tokenInfo)
