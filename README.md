@@ -730,7 +730,7 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
 
-*Результат*
+*Результат:*
 
 Отправляет код подтверждения указанным способом (SMS). 
 
@@ -758,6 +758,11 @@ ws.emit('openSecuritySession', data, function (err, res) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
 
+*Результат:*
+
+Если возникла ошибка, аргумент *err* принимает объект ошибки, иначе *null*. 
+
+Если сессия открылась, аргумент *res* получает идентификатор сессии безопасности.
 
 
 <a name="tokens"></a>
