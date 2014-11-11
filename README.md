@@ -1539,7 +1539,9 @@ function deleteOrder(orderId) {
 ## Сессии безопасности
 
 <a name="getSafetyTypes"></a>
-### Получение списка доступных сессий безопасности 
+### getSafetyTypes 
+
+Получение списка доступных сессий безопасности
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1584,7 +1586,9 @@ ws.emit('getSafetyTypes', function (err, safetyTypes) {
 ```
 
 <a name="getSecuritySessions"></a>
-### Получение списка открытых сессий безопасности
+### getSecuritySessions
+
+Получение списка открытых сессий безопасности
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1612,7 +1616,9 @@ ws.emit('getSecuritySessions', function (err, sessions) {
 ```
 
 <a name="initValidation"></a>
-### Инициализация двухэтапного открытия сессии безопасности (отправка SMS)
+### initValidation
+
+Инициализация двухэтапного открытия сессии безопасности (отправка SMS)
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1637,7 +1643,9 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 
 
 <a name="openSecuritySession"></a>
-### Открытие сессии безопасности
+### openSecuritySession
+
+Открытие сессии безопасности
 
 
 ```javascript
