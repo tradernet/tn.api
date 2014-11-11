@@ -730,6 +730,13 @@ ws.emit('initValidation', safetyTypeId, function (err, res) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
 
+*Результат*
+
+Отправляет код подтверждения указанным способом (SMS). 
+Аргумент **err** принимает объект ошибки или **null**. 
+В случае успешной отправки аргумент **res** получает значение **0**.
+
+
 <a name="activateToken"></a>
 ### Открытие сессии безопасности
 
