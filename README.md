@@ -6,21 +6,22 @@
     * [Ответ сервера](#restResponse)
     * [Возможные коды ответа](#restResponseCodes)
     * [Команды](#restCommands)
-        * [AddBlogPost](#AddBlogPost)
-        * [GetBlogsFeed](#GetBlogsFeed)
-        * [getBlogsFeedByClientId](#getBlogsFeedByClientId)
-        * [setOrderstat](#setOrderstat)
-        * [getProfitList](#getProfitList)
-        * [getInvestFeedByTicker](#getInvestFeedByTicker)
-        * [getBlogsPostById](#getBlogsPostById)
-        * [getBestTraders](#getBestTraders)
-        * [getUserInfoById](#getUserInfoById)
-        * [reg](#reg)
-        * [regPhone](#regPhone)
-        * [regPhoneSms](#regPhoneSms)
-        * [regTariff](#regTariff)
-        * [regPassport](#regPassport)
-        * [regDocs](#regDocs)
+        * [AddBlogPost](#AddBlogPost) - добавление поста в свой блог
+        * [GetBlogsFeed](#GetBlogsFeed) - получение ленты подписок пользователя (в блогах)
+        * [getBlogsFeedByClientId](#getBlogsFeedByClientId) - получение ленты подписок клиента (в блогах)
+        * [setOrderstat](#setOrderstat) - сохраняет статистику обработки неисполняемых заявок
+        * [getProfitList](#getProfitList) - список достижений
+        * [getInvestFeedByTicker](#getInvestFeedByTicker) - лента инвестидей по тикеру всех авторов на которых подписан пользователь
+        * [getBlogsPostById](#getBlogsPostById) - пост по ID
+        * [getBestTraders](#getBestTraders) - рейтинг трэйдеров
+        * [getUserInfoById](#getUserInfoById) - данные пользователя по ID
+        * Анкета
+            * [reg](#reg) - Шаг 1. Регистрация пользователя. Создание учётной записи. Получение его userId
+            * [regPhone](#regPhone) - Шаг 2. Отправка sms кода для подтверждения номера телефона
+            * [regPhoneSms](#regPhoneSms) - Шаг 3. Подтверждение номера телефона при помощи кода
+            * [regTariff](#regTariff) - Шаг 4. Выбор тарифа пользователя
+            * [regPassport](#regPassport) - Шаг 5. Паспортные данные нового пользователя
+            * [regDocs](#regDocs) - Шаг 6. Регистрационные документы нового пользователя
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
     * [Рыночные данные](#marketData): 
