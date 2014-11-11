@@ -596,48 +596,48 @@ $params = array (
 
 ```json
 {
-    blog_post: {
-        userId: null,
-        viewerId: 0,
-        tsStart: "2012-10-25 12:28:46",
-        posts: [
-            {
-                id: 749,
-                user_id: 339110,
-                date_crt: "2012-10-12 14:11:12.841533",
-                date_mod: "2012-10-12 14:11:12.841533",
-                title: "тест",
-                subtitle: "Подзаголовок",
-                text: "<p>[img_1]обучаемся</p>",
-                agg_comments: 0,
-                agg_likes: null,
-                agg_likers: null,
-                type: 3,
-                security_id: null,
-                param_1: null,
-                param_2: null,
-                approve: 1,
-                liker_1: null,
-                liker_2: null,
-                login: "ztalker",
-                ilike: null,
-                avatar: "/i/_tradersClubUserPicture.png",
-                postDate: "12 октября в 14:11",
-                images: [
-                    {
-                        id: 279,
-                        num: 1,
-                        post_id: 749,
-                        position: 1,
-                        description: "",
-                    }
-                ]
-            }
-        ],
-        page: 1,
-        moder: true,
-    },
-    code: 0
+  "blog_post": {
+    "userId": null,
+    "viewerId": 0,
+    "tsStart": "2012-10-25 12:28:46",
+    "posts": [
+      {
+        "id": 749,
+        "user_id": 339110,
+        "date_crt": "2012-10-12 14:11:12.841533",
+        "date_mod": "2012-10-12 14:11:12.841533",
+        "title": "тест",
+        "subtitle": "Подзаголовок",
+        "text": "<p>[img_1]обучаемся</p>",
+        "agg_comments": 0,
+        "agg_likes": null,
+        "agg_likers": null,
+        "type": 3,
+        "security_id": null,
+        "param_1": null,
+        "param_2": null,
+        "approve": 1,
+        "liker_1": null,
+        "liker_2": null,
+        "login": "ztalker",
+        "ilike": null,
+        "avatar": "/i/_tradersClubUserPicture.png",
+        "postDate": "12 октября в 14:11",
+        "images": [
+          {
+            "id": 279,
+            "num": 1,
+            "post_id": 749,
+            "position": 1,
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "page": 1,
+    "moder": true
+  },
+  "code": 0
 }
 ```
 
