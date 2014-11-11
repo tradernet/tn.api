@@ -654,6 +654,37 @@ ws.emit('getSafetyTypes', function (err, safetyTypes) {
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/j5gvbckq/)
 
+*Результат:*
+
+```json
+[
+  {
+    "safety_type_id": 2,
+    "safety_type": "Token Aladdin",
+    "description": "Использование генератора временных паролей компании Aladdin",
+    "enabled": false,
+    "status": "Использование недоступно",
+    "status_description": "Использование этого уровня безопасности Вам не разрешено. За разъяснениями Вы можете обратиться в службу поддержки.",
+    "status_id": 0
+  },
+  {
+    "safety_type_id": 3,
+    "safety_type": "SMS",
+    "description": "Подтверждение с помощью SMS",
+    "enabled": true,
+    "status": "Доступно [PHONE_NUMBER]",
+    "status_id": 1
+  },
+  {
+    "safety_type_id": 4,
+    "safety_type": "Логин, пароль",
+    "description": "Без дополнительного подтверждения",
+    "enabled": true,
+    "status": "Доступно",
+    "status_id": 1
+  }
+]
+```
 
 <a name="getSecuritySessions"></a>
 ### Получение списка открытых сессий безопасности
@@ -717,6 +748,8 @@ ws.emit('openSecuritySession', data, function (err, res) {
 ```
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/pabzmkky/)
+
+
 
 <a name="tokens"></a>
 ## Токены безопасности
