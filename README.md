@@ -52,7 +52,7 @@ API_SECRET: при доступе по userId задаётся в профиле
 
 
 
-### Ответ сервера:
+## Ответ сервера:
 
 | параметр | описание                      | обязательный |
 | -------- | --------                      | ------------ |
@@ -81,8 +81,59 @@ API_SECRET: при доступе по userId задаётся в профиле
 | 14 | ERROR_BAD_CODE | Неверный проверочный код |
 
 
+## Команды 
 
 
+### AddBlogPost
+
+Добавление поста в свой блог
+
+*Параметры команды:*
+
+| параметр | описание | обязательный |
+| -------- | -------- | ------------ |
+| title    | Заголовок (string)                         | нет |
+| subtitle | Подзаголовок (string)                      | нет |
+| tags     | Тэги поста (string), разделитель - запятая | нет |
+| text     | Текст поста (string)                       | да |
+| images   | Изображения прикрепляемые к посту (array)  | нет |
+
+Images может содержать в себе несколько объектов image:
+
+| параметр    | описание                               | обязательный |
+| ----------- | -------------------------------------- | ------------ |
+| num         | уникальный номер картинки внутри поста | да |
+| url         | url картинки (string)                  | да |
+| position    | позиция изображения (string), возможные варианты - left, right, between | нет |
+| description | описание картинки | нет |
+
+*Пример:*
+
+```php
+<?php
+$params = array (
+    'title'    => 'title',
+    'subtitle' => 'subtitle',
+    'tags'     => 'tag1 ,tag2, tag3',
+    'text'     => 'Posttext[img_1][img_2]',
+    'images' =>
+    array (
+        array (
+            'num'         => 1,
+            'url'         => 'http://example.com/sample.jpg',
+            'position'    => 'left',
+            'description' => 'Imagedescription',
+        ),
+        array (
+            'num'         => 2,
+            'url'         => 'http://example.com/sample2.jpg',
+            'position'    => 'between',
+            'description' => 'Secondimagedescription',
+        ),
+    ),
+);
+?>
+```
 
 
 
