@@ -21,8 +21,6 @@
         * [regTariff](#regTariff)
         * [regPassport](#regPassport)
         * [regDocs](#regDocs)
-
-
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
     * [Рыночные данные](#marketData): подписки на [котировки](#notifyQuotes), 
