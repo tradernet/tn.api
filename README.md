@@ -22,9 +22,6 @@
             * [regTariff](#regTariff) - выбор тарифа пользователя
             * [regPassport](#regPassport) - паспортные данные нового пользователя
             * [regDocs](#regDocs) - регистрационные документы нового пользователя
-            <ol>
-            <li>li</li>
-            </ol>
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
     * [Рыночные данные](#marketData): 
