@@ -1,6 +1,6 @@
 ![TraderNet](https://raw.githubusercontent.com/tradernet/tn.api/master/rsz_logo_tradernet.png "TraderNet")
 
-# [REST API](#RESTAPI)
+* [REST API](#RESTAPI)
 
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
