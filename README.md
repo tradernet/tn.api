@@ -2,6 +2,24 @@
 
 * [REST API](#RESTAPI)
 
+    * Команды
+        * [AddBlogPost](#AddBlogPost)
+        * [GetBlogsFeed](#GetBlogsFeed)
+        * [getBlogsFeedByClientId](#getBlogsFeedByClientId)
+        * [setOrderstat](#setOrderstat)
+        * [getProfitList](#getProfitList)
+        * [getInvestFeedByTicker](#getInvestFeedByTicker)
+        * [getBlogsPostById](#getBlogsPostById)
+        * [getBestTraders](#getBestTraders)
+        * [getUserInfoById](#getUserInfoById)
+        * [reg](#reg)
+        * [regPhone](#regPhone)
+        * [regPhoneSms](#regPhoneSms)
+        * [regTariff](#regTariff)
+        * [regPassport](#regPassport)
+        * [regDocs](#regDocs)
+
+
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
     * [Рыночные данные](#marketData): подписки на [котировки](#notifyQuotes), 
@@ -83,7 +101,7 @@ API_SECRET: при доступе по userId задаётся в профиле
 
 ## Команды 
 
-
+<a name="AddBlogPost"></a>
 ### AddBlogPost
 
 Добавление поста в свой блог
@@ -135,6 +153,7 @@ $params = array (
 ?>
 ```
 
+<a name="GetBlogsFeed"></a>
 ### GetBlogsFeed
 
 Получение ленты подписок пользователя (в блогах)
@@ -221,6 +240,7 @@ $params = array (
 }
 ```
 
+<a name="getBlogsFeedByClientId"></a>
 ### getBlogsFeedByClientId
 
 Получение ленты подписок клиента (в блогах)
@@ -308,6 +328,7 @@ $params = array (
 }
 ```
 
+<a name="setOrderstat"></a>
 ### setOrderstat
 
 Сохраняет статистику обработки неисполняемых заявок, 
@@ -384,6 +405,7 @@ $params = array (
 }
 ```
 
+<a name="getProfitList"></a>
 ### getProfitList
 
 Список достижений
@@ -433,6 +455,7 @@ $params = array (
 }
 ```
 
+<a name="getInvestFeedByTicker"></a>
 ### getInvestFeedByTicker
 
 Лента инвестидей по тикеру всех авторов на которых подписан пользователь
@@ -520,7 +543,7 @@ $params = array (
 }
 ```
 
-
+<a name="getBlogsPostById"></a>
 ### getBlogsPostById
 
 Пост по ID
@@ -609,6 +632,7 @@ $params = array (
 }
 ```
 
+<a name="getBestTraders"></a>
 ### getBestTraders
 
 Рейтинг трэйдеров
@@ -674,6 +698,7 @@ $params = array (
 }
 ```
 
+<a name="getUserInfoById"></a>
 ### getUserInfoById
 
 Данные пользователя по ID
@@ -760,6 +785,7 @@ $params = array (
 }
 ```
 
+<a name="reg"></a>
 ### reg
 
 Анкета: Шаг 1. Регистрация пользователя. Создание учётной записи. Получение его userId.
@@ -786,6 +812,7 @@ $params = array (
 ?>
 ```
 
+<a name="regPhone"></a>
 ### regPhone
 
 Анкета: Шаг 2. Отправка sms кода для подтверждения номера телефона
@@ -801,6 +828,7 @@ $params = array (
 
 В ответ возвращается phoneId.
 
+<a name="regPhoneSms"></a>
 ### regPhoneSms
 
 Анкета: Шаг 3. Подтверждение номера телефона при помощи кода
@@ -816,6 +844,7 @@ $params = array (
 
 В случае удачной проверки возвращается isCodeCorrect=true
 
+<a name="regTariff"></a>
 ### regTariff
 
 Анкета: Шаг 4. Выбор тарифа пользователя
@@ -835,6 +864,7 @@ $params = array (
 * tariff_allInclusive
 * tariff_personalBroker
 
+<a name="regPassport"></a>
 ### regPassport
 
 Анкета: Шаг 5. Паспортные данные нового пользователя
@@ -862,6 +892,7 @@ $params = array (
 | passport_ser | Серия паспорта | да |
 | passport_number | Номер паспорта | да |
 
+<a name="regDocs"></a>
 ### regDocs
 
 Анкета: Шаг 6. Регистрационные документы нового пользователя
