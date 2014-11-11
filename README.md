@@ -1,24 +1,39 @@
 ![TraderNet](https://raw.githubusercontent.com/tradernet/tn.api/master/rsz_logo_tradernet.png "TraderNet")
 
-# Socket.IO API
+# [REST API](#RESTAPI)
 
-* [Введение](#intro)
-* [Рыночные данные](#marketData): подписки на [котировки](#notifyQuotes), 
-                                  [стакан](#notifyOrderBook), 
-                                  [сообщения о рынках](#notifyMarkets)
-* [Клиентские данные](#clientData): подписки на клиентские [сессии безопасности](#notifySessions), 
-                                    [портфель](#notifyPortfolio), 
-                                    [приказы](#notifyOrders)
-* [Торговые приказы](#orders): выставление [обычного](#putOrder), 
-                               [StopLoss](#putStopLoss) приказа,
-                               [отмена приказа](#deleteOrder)
-* [Сессии безопасности](#sessions): получение списков [доступных типов безопасности](#getSafetyTypes) и 
-                                    [открытых сессий безопасности](#getSecuritySessions),
-                                    [инициализация двухэтапного открытия сессии безопасности](#initValidation),
-                                    [открытие сессии безопасности](#activateToken)
-* [Токены безопасности](#tokens): [активация токена](#activateToken), 
-                                  [синхронизация токена](#syncToken), 
-                                  [информация о токене](#tokenInfo)
+* [Socket.IO API](#SIOAPI)
+    * [Введение](#intro)
+    * [Рыночные данные](#marketData): подписки на [котировки](#notifyQuotes), 
+                                      [стакан](#notifyOrderBook), 
+                                      [сообщения о рынках](#notifyMarkets)
+    * [Клиентские данные](#clientData): подписки на клиентские [сессии безопасности](#notifySessions), 
+                                        [портфель](#notifyPortfolio), 
+                                        [приказы](#notifyOrders)
+    * [Торговые приказы](#orders): выставление [обычного](#putOrder), 
+                                   [StopLoss](#putStopLoss) приказа,
+                                   [отмена приказа](#deleteOrder)
+    * [Сессии безопасности](#sessions): получение списков [доступных типов безопасности](#getSafetyTypes) и 
+                                        [открытых сессий безопасности](#getSecuritySessions),
+                                        [инициализация двухэтапного открытия сессии безопасности](#initValidation),
+                                        [открытие сессии безопасности](#activateToken)
+    * [Токены безопасности](#tokens): [активация токена](#activateToken), 
+                                      [синхронизация токена](#syncToken), 
+                                      [информация о токене](#tokenInfo)
+
+<a name="RESTAPI"></a>
+# REST API
+
+API_URL: https://tradernet.ru/api/
+API_SECRET: при доступе по userId задаётся в профиле пользователя в разделе "лучшие трейдеры", при доступе по ip задаётся администратором
+Формат данных: JSON
+Тип http запроса: POST (возможен GET для тестирования)
+
+
+
+
+<a name="SIOAPI"></a>
+# Socket.IO API
 
 <a name="intro"></a>
 ## Введение
