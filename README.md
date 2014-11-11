@@ -29,8 +29,8 @@
         * [notifyMarkets](#notifyMarkets) - подписка на сообщения о рынках
     * [Клиентские данные](#clientData): 
         * [notifySessions](#notifySessions) - подписки на клиентские сессии безопасности
-        * [портфель](#notifyPortfolio) - подписка на портфель клиента
-        * [приказы](#notifyOrders) - подписка на приказы клиента
+        * [notifyPortfolio](#notifyPortfolio) - подписка на портфель клиента
+        * [notifyOrders](#notifyOrders) - подписка на приказы клиента
     * [Торговые приказы](#orders): 
         * [putOrder](#putOrder) - выставление приказа
         * [deleteOrder](#deleteOrder) - отмена приказа
