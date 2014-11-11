@@ -36,7 +36,7 @@
         * [putOrder](#putOrder) - выставление приказа
         * [deleteOrder](#deleteOrder) - отмена приказа
     * [Сессии безопасности](#sessions): 
-        * [getSafetyTypes](#getSafetyTypes) - получение списка доступных типов безопасности
+        * [getSafetyTypes](#getSafetyTypes) - получение списка типов сессий безопасности
         * [getSecuritySessions](#getSecuritySessions) - получение открытых сессий безопасности
         * [initValidation](#initValidation) - инициализация двухэтапного открытия сессии безопасности
         * [openSecuritySession](#openSecuritySession) - открытие сессии безопасности
@@ -1555,7 +1555,7 @@ function deleteOrder(orderId) {
 <a name="getSafetyTypes"></a>
 ### getSafetyTypes 
 
-Получение списка доступных сессий безопасности
+Получение списка типов сессий безопасности.
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1568,6 +1568,18 @@ ws.emit('getSafetyTypes', function (err, safetyTypes) {
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/j5gvbckq/)
 
 *Результат:*
+
+| Название | Описание |
+| -------- | -------- |
+| safety_type_id | Идентификатор типа сессии безопасности |
+| safety_type | Идентификатор тип сессии безопасности |
+| description | Тип сессии безопасности, отображаемый в интерфейсе пользователя |
+| enabled | Доступен или нет клиенту |
+| status | Дата истечения сессии безопасности |
+| status_description | Время, оставшееся до истечения сессии безопасности (мс) |
+| status_id | Время, оставшееся до истечения сессии безопасности (мс) |
+
+*Пример:*
 
 ```json
 [
@@ -1602,7 +1614,7 @@ ws.emit('getSafetyTypes', function (err, safetyTypes) {
 <a name="getSecuritySessions"></a>
 ### getSecuritySessions
 
-Получение списка открытых сессий безопасности
+Получение списка открытых клиентом сессий безопасности
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1638,8 +1650,8 @@ ws.emit('getSecuritySessions', function (err, sessions) {
 | Название | Описание |
 | -------- | -------- |
 | id | Идентификатор сессии |
-| safety_type_id | Идентификатор тип сессии безопасности |
-| safety_type | Тип сессии безопасности, отображаемое в интерфейсе пользователя |
+| safety_type_id | Идентификатор типа сессии безопасности |
+| safety_type | Тип сессии безопасности, отображаемый в интерфейсе пользователя |
 | start_datetime | Дата открытия сессии |
 | expire_datetime | Дата истечения сессии безопасности |
 | expire | Время, оставшееся до истечения сессии безопасности (мс) |
