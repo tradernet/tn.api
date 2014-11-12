@@ -928,9 +928,9 @@ $params = array (
 
 ### Подключение к Socket.IO:
 
-Для подключения к сервису нужно поместить код библиотеки *socket.io* на страницу клиента:
+Для работы с сервисом нужно подключить код библиотеки *socket.io* на странице клиента:
 ```html
-<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="https://wsbeta.tradernet.ru/socket.io/socket.io.js"></script>
 ```
 И создать объект socket.io:
 ```javascript
