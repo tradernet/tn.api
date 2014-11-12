@@ -1310,9 +1310,40 @@ ws.on('sessions', function (sessions) {
 ws.emit('notifySessions');
 ```
 
-[Запустить на JSFIDDLE](http://jsfiddle.net/papageno/v4392o3c/)
+[Запустить на JSFIDDLE](http://jsfiddle.net/papageno/k361p8g6/)
+
+*Поля сообщения*
+
+| id | Идентификатор сессии |
+| owner_login | Логин пользователя, от имени которого открыта сессия |
+| user_login | Логин авторизованного пользователя |
+| safety_type_id | Тип сессии безопасности |
+| start_datetime | Дата открытия сессии безопасности |
+| expire_datetime | Дата истечения сессии безопасности |
+| expire | Время, оставшееся до истечения сессии безопасности, мс |
 
 *Пример сообщения:*
+
+```json
+[
+  {
+    "response": {
+      "res": [
+        {
+          "id": 6765662,
+          "owner_login": "OWNER_LOGIN",
+          "user_login": "USER_LOGIN",
+          "safety_type_id": 4,
+          "key_current": "Логин, пароль",
+          "start_datetime": "2014-11-11T13:22:06.247",
+          "expire_datetime": "2014-11-12T13:22:06.247",
+          "expire": 37790
+        }
+      ]
+    }
+  }
+]
+```
 
 <a name="notifyPortfolio"></a>
 ### notifyPortfolio
