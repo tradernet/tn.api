@@ -1548,8 +1548,7 @@ var putData = {
     expiration_id: 1,
     submit_ch_c: 1,
     message_id: 0,
-    replace_order_id: 0,
-    userOrderId: 123
+    replace_order_id: 0
 };
 
 ws.emit('putOrder', putData, function (err, res) {
@@ -1558,6 +1557,16 @@ ws.emit('putOrder', putData, function (err, res) {
 ```
 
 [Запустить на JSFIDDLE](http://jsfiddle.net/papageno/fosxg6vx/)
+
+*Результат*
+
+Возвращает идентификатор приказа
+
+```json
+{ 
+    "orderId": 6949116
+}
+```
 
 <a name="deleteOrder"></a>
 ### deleteOrder
