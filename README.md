@@ -1793,7 +1793,7 @@ ws.emit('openSecuritySession', data, function (err, res) {
 <a name="activateToken"></a>
 ### activateToken
 
-Активация токена
+Активация токена. Передаётся серийный номер токена.
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1808,7 +1808,7 @@ ws.emit('activateToken', tokenSN, function (err, res) {
 <a name="syncToken"></a>
 ### synchronizeToken
 
-Синхронизация токена
+Синхронизация токена. Передаётся два последовательных ключа, выданных токеном.
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
@@ -1824,7 +1824,7 @@ ws.emit('synchronizeToken', key1, key2, function (err, res) {
 <a name="tokenInfo"></a>
 ### getTokenInfo
 
-Информация о токене
+Возвращает информацию о токене
 
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
