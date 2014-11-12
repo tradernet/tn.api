@@ -28,6 +28,7 @@
         * [notifyQuotes](#notifyQuotes) - подписка на котировки
         * [notifyOrderBook](#notifyOrderBook) - подписка на стакан 
         * [notifyMarkets](#notifyMarkets) - подписка на сообщения о рынках
+        * [setDelay](#setDelay) - установка минимальной задержки между обновлениями
     * [Клиентские данные](#clientData): 
         * [notifySessions](#notifySessions) - подписки на клиентские сессии безопасности
         * [notifyPortfolio](#notifyPortfolio) - подписка на портфель клиента
@@ -1287,6 +1288,17 @@ ws.emit('notifyMarkets');
 | o | Время открытия рынка |
 | c | Время закрытия рынка |
 | dt | Сдвиг в минутах относительно Москвы |
+
+<a name="setDelay"></a>
+### setDelay
+
+Установка минимальной задержки между обновлениями котировок и стакана.
+Принимает интервал обновления в миллисекундах.
+
+```javascript
+var ws = io('https://wsbeta.tradernet.ru');
+ws.emit('setDelay', 1000);
+```
 
 <a name="clientData"></a>
 ## Клиентские данные
