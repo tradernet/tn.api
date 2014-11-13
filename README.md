@@ -29,6 +29,7 @@
         * [notifyOrderBook](#notifyOrderBook) - подписка на стакан 
         * [notifyMarkets](#notifyMarkets) - подписка на сообщения о рынках
         * [setDelay](#setDelay) - установка минимальной задержки между обновлениями
+        * [searchSecurities](#searchSecurities) - поиск ценных бумаг по частичному совпадению тикера
     * [Клиентские данные](#clientData): 
         * [notifySessions](#notifySessions) - подписки на клиентские сессии безопасности
         * [notifyPortfolio](#notifyPortfolio) - подписка на портфель клиента
@@ -1299,6 +1300,54 @@ ws.emit('notifyMarkets');
 var ws = io('https://wsbeta.tradernet.ru');
 ws.emit('setDelay', 1000);
 ```
+
+<a name="searchSecurities"></a>
+### searchSecurities
+
+Поиск ценных бумаг по частичному совпадению тикера
+
+```javascript
+var ws = io('https://wsbeta.tradernet.ru');
+
+ws.emit('searchSecurities', 'SBER', function (err, res) {
+    console.log(err, res);
+});
+```
+
+[Запустить на JSFIDDLE](http://jsfiddle.net/papageno/b1rcseL0/)
+
+*Пример сообщения:*
+
+```json
+[
+  {
+    "sid": 16394,
+    "n": "Сбербанк России",
+    "t": "SBER",
+    "isin": "RU0009029540",
+    "type": "ао",
+    "tp": "ao",
+    "tn": "Сбербанк России SBER",
+    "exkey": "MICEX",
+    "exname": "ММВБ",
+    "nt_ticker": "SBER"
+  },
+  {
+    "sid": 16395,
+    "n": "Сбербанк-п",
+    "t": "SBERP",
+    "isin": "RU0009029557",
+    "type": "ап",
+    "tp": "ap",
+    "tn": "Сбербанк-п SBERP",
+    "exkey": "MICEX",
+    "exname": "ММВБ",
+    "nt_ticker": "SBERP"
+  }
+]
+```
+
+
 
 <a name="clientData"></a>
 ## Клиентские данные
