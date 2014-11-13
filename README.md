@@ -1562,7 +1562,7 @@ var putData = {
     submit_ch_c: 1,
     message_id: 0,
     replace_order_id: 0,
-    groupPortfolioName: 'groupName',
+    groupPortfolioName: 12,
     userOrderId: 123
 };
 
