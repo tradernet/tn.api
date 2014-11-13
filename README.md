@@ -1546,7 +1546,6 @@ ws.emit('notifyOrders');
 | groupPortfolioName | это id, который идентифицирует группу бумаг пользователя - в дальнейшем бумаги в позициях будут при наличии этого признака != 0 сгруппированы по данному признаку. например отправив две сделки с указанием motif ==12, в портфеле пользователя появится отдельная группа бумаг с этими двумя бумагами |
 | userOrderId | Признак для отслеживания выставляемых приказов по внутреннему (со стороны клиента) признаку |
 
-
 ```javascript
 var ws = io('https://wsbeta.tradernet.ru');
 
@@ -1562,7 +1561,9 @@ var putData = {
     expiration_id: 1,
     submit_ch_c: 1,
     message_id: 0,
-    replace_order_id: 0
+    replace_order_id: 0,
+    groupPortfolioName: 'groupName',
+    userOrderId: 123
 };
 
 ws.emit('putOrder', putData, function (err, res) {
