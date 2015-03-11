@@ -946,6 +946,73 @@ var ws = io('https://wsbeta.tradernet.ru');
 Для работы с боевым сервером необходима авторизация на сайте https://tradernet.ru, 
 для работы с демо сервером - на сайте https://beta.tradernet.ru 
 
+### Подключение из Node.js (без браузера)
+
+Для подключения к API из Node.js можно использовать библиотеку socket.io-client:
+
+```javascript
+var io = require('socket.io-client');
+var ws = io('https://wsbeta.tradernet.ru', {
+    transports: ['websocket']
+});
+
+ws.on('connect', function () {
+    console.log('socket.io-client connected');
+});
+```
+
+В отличие от браузерной авторизации, в Node.js можно авторизоваться по ключу.
+
+Это позволяет избежать необходимости открытия сессии безопасности обычным способом (по токену или по SMS).
+
+Чтобы авторизоваться в системе по ключу нужно:
+
+1. Сгенерировать публичный и секретный ключи на странице профиля.
+2. Создать объект авторизации
+3. С помощью секретного ключа сгенерировать подпись.
+4. Открыть WebSocket-соединение
+5. Отправить запрос авторизации через открытое в предыдущем пункте WebSocket-соединение.
+
+*Пример авторизации:*
+
+```javascript
+var io = require('socket.io-client');
+var tncrypto = require('./tn-crypto');
+
+var pubKey = '*** PUBLIC KEY ***';
+var secKey = '*** SECRET KEY ***';
+
+var ws = io('https://wsbeta.tradernet.ru', {
+    transports: ['websocket']
+});
+
+ws.on('connect', function () {
+    console.log('WS connect');
+    auth(ws, pubKey, secKey, function (err, auth) {
+        if (err) return console.error('Ошибка авторизации', err);
+        console.log('login:', auth.login);
+        console.log('mode:', auth.mode);
+        if (auth.trade)
+            console.log('Приказы подавать можно');
+        else
+            console.log('Приказы подавать нельзя');
+    });
+});
+
+function auth(ws, pubKey, secKey, cb) {
+    var data = {
+        apiKey: pubKey,
+        cmd: 'getAuthInfo',
+        nonce: Date.now()
+    };
+    var sig = tncrypto.sign(data, secKey);
+    ws.emit('auth', data, sig, cb);
+}
+```
+
+Здесь использован модуль шифрования tn-crypto.js, который находится в папке examples/
+
+
 ### Запуск примеров на JSFIDDLE
 
 Примеры в этой статье можно запускать в *JSFIDDLE*. 
