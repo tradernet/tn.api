@@ -22,6 +22,9 @@
             * [regTariff](#regTariff) - шаг 4. Выбор тарифа пользователя
             * [regPassport](#regPassport) - шаг 5. Паспортные данные нового пользователя
             * [regDocs](#regDocs) - шаг 6. Регистрационные документы нового пользователя
+        * [getQuotesHistory](#getQuotesHistory) - получение истории котировок по бумаге
+        * [getSecurityInfo](#getSecurityInfo) - получение информации по бумаге
+            
 * [Socket.IO API](#SIOAPI)
     * [Введение](#intro)
     * [Рыночные данные](#marketData): 
@@ -920,6 +923,64 @@ $params = array (
 Сами файлы отправляются стандартным способом.
 
 В ответ возвращается code=0, в случае удачной загрузки, либо код ошибки.
+
+<a name="getQuotesHistory"></a>
+## getQuotesHistory
+
+Получение истории котировок по бумаге
+
+```javascript
+var json = {         
+   'cmd': 'getQuotesHistory',
+   'params': 
+   {
+       'ticker': 'SBER',
+       'interval': 60, // '1', '5', '10', '15', '30', '60', 
+       'from': '2015-01-01’,
+       'to': '2015-02-01' //если параметр опущен, будет взята текущая дата
+   }
+}
+
+$.ajax({
+    url: 'https://tradernet.ru/api/',
+    type: 'POST',
+    data: {q: json},
+    success: function (response) {
+        console.log(response);
+    }
+});
+
+```
+
+
+<a name="getSecurityInfo"></a>
+## getSecurityInfo
+
+Получение информации по бумаге
+
+```javascript
+
+var json = {         
+   'cmd': 'getSecurityInfo',
+   'params': 
+   {
+       'ticker': 'SBER',
+       'sup': true // если опустить этот ключ, придет более подробная инфрмация из торговой системы 
+   }
+}
+
+$.ajax({
+    url: 'https://tradernet.ru/api/',
+    type: 'POST',
+    data: {q: json},
+    success: function (response) {
+        console.log(response);
+    }
+});
+
+```
+
+Получение информации по бумаге
 
 
 <a name="SIOAPI"></a>
